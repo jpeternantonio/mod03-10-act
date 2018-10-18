@@ -1,0 +1,288 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Charmonman', cursive;
+	background-color: #f4f4f4;
+	font:15px/1.5;
+}
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+header{
+  background:#187795;
+  color:#00f2e6;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#1c016d 3px solid;
+  position: relative;
+  animation-name: footer;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+header button{
+  text-transform: uppercase;
+  font-size:16px;
+  background-color: #0fdfff;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0px 20px 0px 20px;
+  animation-name: btn;
+  animation-duration: 3s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+@keyframes btn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+button:hover {
+	transform: rotateY(180deg);
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+  font-size: 30px;
+  /*animation-name: heading;
+  animation-duration: 3s;
+  animation-fill-mode: ease-in;*/
+}
+
+header #branding h1{
+  margin:0;
+ /* animation-name: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;*/
+}
+
+@keyframes heading {
+	0% 	{left: -50px;}
+	100% {left: 0px;}
+}
+
+header nav{
+  float:right;
+  margin-top:40px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+.current {
+	color: #1c016d;
+}
+.current1 {
+	color: #007cdb;
+}
+
+#showcase{
+  min-height:400px;
+  background:url('../images/image5.jpeg') no-repeat;
+  text-align:center;
+  background-size: cover;
+ /* width: 100%;*/
+  /*margin:0 auto;*/
+  color:white;
+  opacity: 0.8;
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+  color: #1c016d;
+  /*background-color: #1c016d;
+  opacity: 0.8;*/
+}
+
+#showcase p{
+  font-size:20px;
+  color: #1c016d;
+}
+
+#newsletter{
+  padding:15px;
+  color:#00f2e6;
+  background:#187795;
+}
+
+#subscribe {
+	position: relative;
+	animation: side;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	text-align: center;
+}
+
+@keyframes side {
+	0%	{left: -100px;}
+	100% {left: 0px;}
+}
+
+#newsletter h1{
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+  background-color: #00f2e6;
+}
+
+.button1 {
+  text-transform: uppercase;
+  font-size:16px;
+  background-color: #0fdfff;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0px 20px 0px 20px;
+  animation-name: btn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+  box-shadow: 3px 3px 3px #221c18;
+}
+
+#boxes .box img:hover {
+	opacity: 0.8;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#1c016d;
+  text-align: center;
+  position: relative;
+  animation-name: footer;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer {
+	0% 	{bottom: -100px;}
+	100% {bottom: 0px;}
+}
+
+
+
+/* Media Queries for tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box {
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"] {
+    width:100%;
+    margin-bottom:5px;
+  }
+}
+
+/*phone version*/
+
+@media only screen and (max-width: 400px){
+	 header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box {
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button {
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"] {
+    width:100%;
+    margin-bottom:5px;
+  }
+
+
+}
